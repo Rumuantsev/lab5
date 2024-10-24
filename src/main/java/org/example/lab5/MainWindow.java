@@ -16,7 +16,7 @@ public class MainWindow extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         primaryStage = stage;
-        loaRestaurant();
+        loadFlag();
     }
 
     public static void loadSwitcher() throws Exception {
@@ -50,6 +50,14 @@ public class MainWindow extends Application {
         primaryStage.setResizable(false);
         primaryStage.setTitle("Calculator");
         ((CalculatorController) loader.getController()).init(primaryStage);
+        primaryStage.show();
+    }
+
+    public static void loadFlag() throws Exception {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(MainWindow.class.getResource("FlagInterface.fxml")));
+        primaryStage.setTitle("Выбор цветов");
+        primaryStage.setScene(new Scene(root, 300, 250));
+        primaryStage.setResizable(false); // Отключаем возможность изменения размера
         primaryStage.show();
     }
 
