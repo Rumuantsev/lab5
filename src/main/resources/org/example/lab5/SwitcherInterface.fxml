@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab5.SwitcherController">
+  <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToCalculator" text="Калькулятор" onAction="#loadCalculator"/>
+  <TextField fx:id="textField1" promptText="Поле 1"/>
+  <TextField fx:id="textField2" promptText="Поле 2"/>
+  <Button fx:id="switchButton" text="→" onAction="#switchText" />
+</VBox>
+
+
+
+
