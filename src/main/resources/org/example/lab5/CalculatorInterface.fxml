@@ -6,12 +6,16 @@
 <?import javafx.scene.text.Font?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
 <AnchorPane prefHeight="610.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/11.0.1"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab5.CalculatorController"
             style="-fx-background-color: RED;">
-
-  <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToSwitcher" text="Окно 2" onAction="#loadSwitcher"/>
-
+  <HBox>
+    <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToSwitcher" text="Задание 1" onAction="#loadSwitcher"/>
+    <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToCheckboxer" text="Задание 2" onAction="#loadCheckboxer"/>
+    <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToRestaurant" text="Задание 3" onAction="#loadRestaurant"/>
+    <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToFlag" text="Задание 5" onAction="#loadFlag"/>
+  </HBox>
   <Pane layoutX="6.0" layoutY="37.0" prefHeight="567.0" prefWidth="449.0" styleClass="mainPane">
     <Pane layoutX="14.0" layoutY="14.0" prefHeight="116.0" prefWidth="422.0" style="-fx-background-color: BLACK;">
       <Label fx:id="lblResult" alignment="CENTER_RIGHT" layoutX="20.0" layoutY="40.0" prefHeight="42.0"

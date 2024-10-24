@@ -4,9 +4,19 @@ import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 
 public class FlagController {
+
+    @FXML
+    public Button btnToSwitcher;
+    @FXML
+    public Button btnToCheckboxer;
+    @FXML
+    public Button btnToRestaurant;
+    @FXML
+    public Button btnToCalculator;
 
     @FXML
     private ComboBox<String> colorComboBox1;
@@ -26,25 +36,39 @@ public class FlagController {
 
     private void initializeComboBox(ComboBox<String> comboBox) {
         comboBox.setItems(FXCollections.observableArrayList(colors));
-        comboBox.setValue("Белый"); // Установить белый цвет по умолчанию
+        comboBox.setValue("Белый");
     }
 
     @FXML
     private void showSelectedColors() {
-        // Получаем выбранные цвета
         String color1 = colorComboBox1.getValue();
         String color2 = colorComboBox2.getValue();
         String color3 = colorComboBox3.getValue();
 
-        // Формируем строку с выбранными цветами
         String selectedColors = color1 + ", " + color2 + ", " + color3;
 
-        // Выводим модальное окно с сообщением
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("Выбранные цвета");
         alert.setHeaderText(null);
         alert.setContentText(selectedColors);
 
         alert.showAndWait();
+    }
+
+    @FXML
+    private void loadSwitcher() throws Exception {
+        MainWindow.loadSwitcher();
+    }
+    @FXML
+    private void loadCheckboxer() throws Exception {
+        MainWindow.loadCheckboxer();
+    }
+    @FXML
+    private void loadRestaurant() throws Exception {
+        MainWindow.loadRestaurant();
+    }
+    @FXML
+    private void loadCalculator() throws Exception {
+        MainWindow.loadCalculator();
     }
 }

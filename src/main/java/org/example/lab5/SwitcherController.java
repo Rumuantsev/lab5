@@ -13,7 +13,14 @@ import javafx.stage.Stage;
 public class SwitcherController {
 
     @FXML
+    public Button btnToCheckboxer;
+    @FXML
+    public Button btnToRestaurant;
+    @FXML
     public Button btnToCalculator;
+    @FXML
+    public Button btnToFlag;
+
     @FXML
     private TextField textField1;
     @FXML
@@ -40,7 +47,19 @@ public class SwitcherController {
     }
 
     @FXML
+    private void loadCheckboxer() throws Exception {
+        MainWindow.loadCheckboxer();
+    }
+    @FXML
+    private void loadRestaurant() throws Exception {
+        MainWindow.loadRestaurant();
+    }
+    @FXML
     private void loadCalculator() throws Exception {
-        MainWindow.loadCalculator();  // Переход на второе окно
+        MainWindow.loadCalculator();
+    }
+    @FXML
+    private void loadFlag() throws Exception {
+        MainWindow.loadFlag();
     }
 }

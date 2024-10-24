@@ -9,7 +9,15 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class CalculatorController {
-    @FXML public Button btnToSwitcher;
+    @FXML
+    public Button btnToSwitcher;
+    @FXML
+    public Button btnToCheckboxer;
+    @FXML
+    public Button btnToRestaurant;
+    @FXML
+    public Button btnToFlag;
+
     @FXML private Label lblResult;
 
     private double num1 = 0;
@@ -70,5 +78,16 @@ public class CalculatorController {
     private void loadSwitcher() throws Exception {
         MainWindow.loadSwitcher();  // Переход на второе окно
     }
-
+    @FXML
+    private void loadCheckboxer() throws Exception {
+        MainWindow.loadCheckboxer();
+    }
+    @FXML
+    private void loadRestaurant() throws Exception {
+        MainWindow.loadRestaurant();
+    }
+    @FXML
+    private void loadFlag() throws Exception {
+        MainWindow.loadFlag();
+    }
 }

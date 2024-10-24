@@ -11,58 +11,66 @@
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="org.example.lab5.CheckboxerController"
-            prefHeight="400.0" prefWidth="600.0">
+            style="-fx-padding: 20;">
+    <HBox>
+        <AnchorPane.topAnchor>5</AnchorPane.topAnchor>
+        <AnchorPane.leftAnchor>5</AnchorPane.leftAnchor>
+        <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToSwitcher" text="Задание 1" onAction="#loadSwitcher"/>
+        <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToRestaurant" text="Задание 3" onAction="#loadRestaurant"/>
+        <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToCalculator" text="Задание 4" onAction="#loadCalculator"/>
+        <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToFlag" text="Задание 5" onAction="#loadFlag"/>
+    </HBox>
 
     <ImageView fx:id="image1"
-               fitHeight="300"
+               fitHeight="130"
                preserveRatio="true"
                pickOnBounds="true">
         <Image url="@/images/image1.png" />
-        <AnchorPane.topAnchor>20</AnchorPane.topAnchor>
-        <AnchorPane.leftAnchor>20</AnchorPane.leftAnchor>
+        <AnchorPane.topAnchor>50</AnchorPane.topAnchor>
+        <AnchorPane.leftAnchor>5</AnchorPane.leftAnchor>
     </ImageView>
 
     <CheckBox fx:id="checkbox1"
-              text="Image 3"
+              text="Спанч Боб"
               selected="true"
               onAction="#handleCheckboxAction">
-        <AnchorPane.topAnchor>500</AnchorPane.topAnchor>
-        <AnchorPane.leftAnchor>50</AnchorPane.leftAnchor>
+        <AnchorPane.topAnchor>200</AnchorPane.topAnchor>
+        <AnchorPane.leftAnchor>33</AnchorPane.leftAnchor>
     </CheckBox>
 
     <ImageView fx:id="image2"
-               fitHeight="300"
+               fitHeight="130"
                preserveRatio="true"
                pickOnBounds="true">
         <Image url="@/images/image2.png" />
-        <AnchorPane.topAnchor>20</AnchorPane.topAnchor>
-        <AnchorPane.leftAnchor>400</AnchorPane.leftAnchor>
+        <AnchorPane.topAnchor>53</AnchorPane.topAnchor>
+        <AnchorPane.leftAnchor>210</AnchorPane.leftAnchor>
     </ImageView>
 
     <CheckBox fx:id="checkbox2"
-              text="Image 2"
+              text="Патрик"
               selected="true"
               onAction="#handleCheckboxAction">
-        <AnchorPane.topAnchor>500</AnchorPane.topAnchor>
-        <AnchorPane.leftAnchor>300</AnchorPane.leftAnchor>
+        <AnchorPane.topAnchor>200</AnchorPane.topAnchor>
+        <AnchorPane.leftAnchor>230</AnchorPane.leftAnchor>
     </CheckBox>
 
     <ImageView fx:id="image3"
-               fitHeight="300"
+               fitHeight="130"
                preserveRatio="true"
                pickOnBounds="true">
         <Image url="@/images/image3.png" />
-        <AnchorPane.topAnchor>20</AnchorPane.topAnchor>
-        <AnchorPane.leftAnchor>700</AnchorPane.leftAnchor>
-        <AnchorPane.rightAnchor>400</AnchorPane.rightAnchor>
+        <AnchorPane.topAnchor>53</AnchorPane.topAnchor>
+        <AnchorPane.leftAnchor>390</AnchorPane.leftAnchor>
+        <AnchorPane.rightAnchor>5</AnchorPane.rightAnchor>
     </ImageView>
 
     <CheckBox fx:id="checkbox3"
-              text="Image 3"
+              text="Сквидвард"
               selected="true"
               onAction="#handleCheckboxAction">
-        <AnchorPane.topAnchor>500</AnchorPane.topAnchor>
-        <AnchorPane.leftAnchor>600</AnchorPane.leftAnchor>
+        <AnchorPane.topAnchor>200</AnchorPane.topAnchor>
+        <AnchorPane.leftAnchor>370</AnchorPane.leftAnchor>
     </CheckBox>
 
 </AnchorPane>

@@ -16,7 +16,7 @@ public class MainWindow extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         primaryStage = stage;
-        loadFlag();
+        loadSwitcher();
     }
 
     public static void loadSwitcher() throws Exception {
@@ -35,7 +35,7 @@ public class MainWindow extends Application {
         primaryStage.show();
     }
 
-    public static void loaRestaurant() throws Exception {
+    public static void loadRestaurant() throws Exception {
         FXMLLoader loader = new FXMLLoader(MainWindow.class.getResource("RestaurantInterface.fxml"));
         Scene scene = new Scene(loader.load());
         primaryStage.setScene(scene);
@@ -56,12 +56,12 @@ public class MainWindow extends Application {
     public static void loadFlag() throws Exception {
         Parent root = FXMLLoader.load(Objects.requireNonNull(MainWindow.class.getResource("FlagInterface.fxml")));
         primaryStage.setTitle("Выбор цветов");
-        primaryStage.setScene(new Scene(root, 300, 250));
-        primaryStage.setResizable(false); // Отключаем возможность изменения размера
+        primaryStage.setScene(new Scene(root, 500, 250));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
     public static void main(String[] args) {
-        launch(args);  // Запуск приложения через стандартный метод JavaFX
+        launch(args);
     }
 }

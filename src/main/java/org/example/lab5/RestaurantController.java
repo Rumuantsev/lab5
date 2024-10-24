@@ -28,6 +28,15 @@ import java.util.List;
 public class RestaurantController {
 
     @FXML
+    public Button btnToSwitcher;
+    @FXML
+    public Button btnToCheckboxer;
+    @FXML
+    public Button btnToCalculator;
+    @FXML
+    public Button btnToFlag;
+
+    @FXML
     private VBox dishListVBox;
 
     private final List<Dish> dishes = List.of(
@@ -174,6 +183,46 @@ public class RestaurantController {
         public void setPortionCount(int portionCount) {
             this.portionCount = portionCount;
         }
+    }
+
+    @FXML
+    private void loadSwitcher() throws Exception {
+        MainWindow.loadSwitcher();
+    }
+    @FXML
+    private void loadCheckboxer() throws Exception {
+        MainWindow.loadCheckboxer();
+    }
+    @FXML
+    private void loadCalculator() throws Exception {
+        MainWindow.loadCalculator();
+    }
+    @FXML
+    private void loadFlag() throws Exception {
+        MainWindow.loadFlag();
+    }
+}
+
+class Dish {
+    private String name;
+    private double price;
+
+    public Dish(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    @Override
+    public String toString() {
+        return name + " - $" + price;
     }
 }
 

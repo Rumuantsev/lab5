@@ -4,9 +4,15 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
+<?import javafx.scene.layout.HBox?>
 <VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/11.0.1"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab5.SwitcherController">
-  <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToCalculator" text="Калькулятор" onAction="#loadCalculator"/>
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab5.SwitcherController" style="-fx-padding: 20;">
+  <HBox>
+    <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToCheckboxer" text="Задание 2" onAction="#loadCheckboxer"/>
+    <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToRestaurant" text="Задание 3" onAction="#loadRestaurant"/>
+    <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToCalculator" text="Задание 4" onAction="#loadCalculator"/>
+    <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToFlag" text="Задание 5" onAction="#loadFlag"/>
+  </HBox>
   <TextField fx:id="textField1" promptText="Поле 1"/>
   <TextField fx:id="textField2" promptText="Поле 2"/>
   <Button fx:id="switchButton" text="→" onAction="#switchText" />

@@ -3,7 +3,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox spacing="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.lab5.RestaurantController" minWidth="350" minHeight="350" style="-fx-padding: 0 0 0 20;">
+<VBox spacing="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.lab5.RestaurantController" minWidth="350" minHeight="350" style="-fx-padding: 20;">
+    <HBox>
+        <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToSwitcher" text="Задание 1" onAction="#loadSwitcher"/>
+        <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToCheckboxer" text="Задание 2" onAction="#loadCheckboxer"/>
+        <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToCalculator" text="Задание 4" onAction="#loadCalculator"/>
+        <Button layoutX="10.0" layoutY="10.0" prefWidth="115.0" prefHeight="40.0" fx:id="btnToFlag" text="Задание 5" onAction="#loadFlag"/>
+    </HBox>
+
     <Label text="Меню" style="-fx-font-size: 24px;"/>
 
     <VBox fx:id="dishListVBox" spacing="10"/>
